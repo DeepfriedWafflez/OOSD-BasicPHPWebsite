@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--Viewport Meta Tag,for Mobile devices-->
+    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+
+    <title>Brent Ward - Travel Experts Feedback</title>
+    <!--Imports/Links-->
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Site Header: Logo, Title, Nav Bar-->
+    <header>
+        <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
+        <p id="siteTitle">Travel Experts</p>
+        <nav class="topNav">
+            <a href="index.html">Home page</a>
+            <a href="flight.html">Book a Flight</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contacts</a>
+            <a class="active" href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+    <!--Feedback form-->
+    <main class="feedbackMain">
+        <h1>Feedback</h1>
+        <div>
+            <p>Here at Travel Experts we welcome everyones feedback in order to work to improve our company
+                to best serve you, and provide you with the best service out there.<br>Please fill out each box,
+            the extra comment section at the end is optional.</p>
+
+            <form class="feedbackForm" action="POST">
+                <p>How would you rate your experience with us?</p>
+                <input id="expBad" type="radio" name="exp" value="Bad" required>
+                <label for="expBad">Bad</label>
+                <input id="expNeutral" type="radio" name="exp" value="Neutral" required>
+                <label for="expNeutral">Neutral</label>
+                <input id="expGood" type="radio" name="exp" value="Good" required>
+                <label for="expGood">Good</label>
+
+                <p>How was the process of booking your flight?</p>
+                <input id="proBad" type="radio" name="pro" value="Bad" required>
+                <label for="proBad">Bad</label>
+                <input id="proNeutral" type="radio" name="pro" value="Neutral" required>
+                <label for="proNeutral">Neutral</label>
+                <input id="proGood" type="radio" name="pro" value="Good" required>
+                <label for="proGood">Good</label>
+
+                <p>Did you find our site hard to navigate?</p>
+                <input id="navBad" type="radio" name="siteNav" value="Bad" required>
+                <label for="navBad">Bad</label>
+                <input id="navNeutral" type="radio" name="siteNav" value="Neutral" required>
+                <label for="navNeutral">Neutral</label>
+                <input id="navGood" type="radio" name="siteNav" value="Good" required>
+                <label for="navGood">Good</label>
+
+                <p>Do you plan on using our site to book another trip in the future?</p>
+                <input id="useNo" type="radio" name="use" value="noReuse" required>
+                <label for="useNo">No</label>
+                <input id="useYes" type="radio" name="use" value="yesReuse" required>
+                <label for="useYes">Yes</label>
+
+                <p>Do you have any other fina   l thoughts for us?</p>
+                <textarea id="info" name="info" placeholder="Enter Additional info here"></textarea><br>
+
+                <!--Buttons-->
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </div>
+
+    </main>
+    <!--Footer with basic Nav bar-->
+    <footer>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="flight.html">Flights</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contacts</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+        <p>&copy; 2019 Brent Ward - Travel Site Project</p>
+    </footer>
+</body>
+
+</html>
