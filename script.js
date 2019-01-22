@@ -15,7 +15,7 @@ function myFunction() {
 var submitButton = document.getElementById("submitButton");
 submitButton.addEventListener("click", function(event)
 {
-  var choice = confirm("Are you sure you want to submit the form?");
+  var choice = confirm("Are you   sure you want to submit the form?");
   if(choice=true)
   {
     console.log("Data Submitted")
