@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <!--Viewport Meta Tag,for Mobile devices-->
-    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width", inital-scale="1.0">
 
     <title>Brent Ward - Travel Experts Feedback</title>
     <!--Imports/Links-->
@@ -19,7 +19,7 @@
     <header>
         <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
         <p id="siteTitle">Travel Experts</p>
-        <nav class="topNav">
+        <nav class="topNav" id="topNav">
             <a href="index.html">Home page</a>
             <a href="flight.html">Book a Flight</a>
             <a href="register.html">Register</a>
@@ -70,8 +70,8 @@
                 <textarea id="info" name="info" placeholder="Enter Additional info here"></textarea><br>
 
                 <!--Buttons-->
-                <input type="submit">
-                <input type="reset">
+                <input type="submit" id="submitButton">
+                <input type="reset" id="resetButton">
             </form>
         </div>
 
@@ -87,6 +87,7 @@
         </nav>
         <p>&copy; 2019 Brent Ward - Travel Site Project</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
