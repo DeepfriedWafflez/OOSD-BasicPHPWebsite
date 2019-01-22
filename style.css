@@ -22,14 +22,8 @@ body header{
     left: 150px;
     top: -25px;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
 
-
-/*Creates an active responding Navigation bar
+/*Creates an active responding sticky Navigation bar
 Guide found on www.w3schools.com*/
 .topNav{
     background-color: #8B0000;
@@ -46,6 +40,11 @@ Guide found on www.w3schools.com*/
 .topNav a.active{
     background-color: #b22222;
     color: white;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 
@@ -100,6 +99,12 @@ fieldset{
     width: 475px;
     margin:0px auto;
 }
+#regHeader{
+    font-size: 24px;
+}
+#city{
+    width: 20%;
+}
 
 
 /*Feedback Styling*/
@@ -113,6 +118,19 @@ fieldset{
 .feedbackMain textarea{
     width: 250px;
     height: 175px;
+}
+
+
+/*Contact Styling*/
+.contactForm{
+    display:inline-block;
+    width:300px;
+    margin-right:10px;
+    text-align:right;
+}
+.contactForm textarea{
+    width: 200px;
+    height: 180px;
 }
  
     
