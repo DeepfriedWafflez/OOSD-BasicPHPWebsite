@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <!--Viewport Meta Tag,for Mobile devices-->
-    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width", inital-scale="1.0">
 
     <title>Brent Ward - Travel Experts Register</title>
     <!--Imports/Links-->
@@ -18,7 +18,7 @@
     <header>
         <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
         <p id="siteTitle">Travel Experts</p>
-        <nav class="topNav">
+        <nav class="topNav" id="topNav">
             <a href="index.html">Home page</a>
             <a href="flight.html">Book a Flight</a>
             <a class="active" href="register.html">Register</a>
@@ -28,12 +28,13 @@
     </header>
     <!--Registration Form-->
     <main class="registerMain">
-        <p>Register an Account:</p>
+        <p id="regHeader">Register an Account:</p>
 
-        <form class ="registerForm" action="POST">
+        <form class ="registerForm" action="">
             <!--Main account info-->
             <div>
-                <fieldset>
+                <p>[Personal Infomation]</p>
+                <fieldset>  
                     <label for="email">Email:</label> <input id="email" type="text" name="email" placeholder="Enter Email" required><br>
                     <label for="password">Password:</label> <input id="password" type="password" name=password placeholder="Enter a Password" required><br>
                     <label for="firstName">First Name:</label> <input id="firstName" type="text" name="firstName" placeholder="Enter First Name" required><br>
@@ -47,6 +48,68 @@
                 <input id="female" type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
             </fieldset>
+            
+            <div>
+                <!--Secondary account info-->
+                <fieldset>
+                    <label for="address">Address:</label><input id="address" type="text" name="address" placeholder="Enter Address"><br>
+                    <label for="city">City:</label><input id="city" type="text" name="city" placeholder="Enter City">
+                    <label for="province">Province:</label>
+                    <select id="province" name="province">
+                        <option name="NL" value="userProvince">NL</option>
+                        <option name="PE" value="userProvince">PE</option>
+                        <option name="NS" value="userProvince">NS</option>
+                        <option name="NB" value="userProvince">NB</option>
+                        <option name="QC" value="userProvince">QC</option>
+                        <option name="ON" value="userProvince">ON</option>
+                        <option name="MB" value="userProvince">MB</option>
+                        <option name="SK" value="userProvince">SK</option>
+                        <option name="AB" value="userProvince">AB</option>
+                        <option name="BC" value="userProvince">BC</option>
+                        <option name="YT" value="userProvince">YT</option>
+                        <option name="NT" value="userProvince">NT</option>
+                        <option name="NU" value="userProvince">NU</option>
+                    </select><br>
+                    <label for="postalCode">Postal Code:</label><input id="postalCode" type="text" name="postalCode" placeholder="Enter Postal Code"><br>
+                </fieldset>
+                <!--Payment info-->
+                <p>[Payment Information]</p>
+                <fieldset>
+                    <label for="cardType">Card Provider:</label>
+                    <select id="cardType" name="userCardType">
+                        <option name="AE" value="userCardType">American Express</option>
+                        <option name="MC" value="userCardType">Mastercard</option>
+                        <option name="Visa" value="userCardType">Visa</option>
+                    </select><br>
+                    <label for="card#">Card Number:</label><input id="card#" type="text" name="card#" placeholder="Enter Credit Card Number"><br>
+                    <label for="expMonth">Exp. Month:</label>
+                    <select>
+                        <option name="01" value="userCardMonth">01</option>
+                        <option name="02" value="userCardMonth">02</option>
+                        <option name="03" value="userCardMonth">03</option>
+                        <option name="04" value="userCardMonth">04</option>
+                        <option name="05" value="userCardMonth">05</option>
+                        <option name="06" value="userCardMonth">06</option>
+                        <option name="07" value="userCardMonth">07</option>
+                        <option name="08" value="userCardMonth">08</option>
+                        <option name="09" value="userCardMonth">09</option>
+                        <option name="10" value="userCardMonth">10</option>
+                        <option name="11" value="userCardMonth">11</option>
+                        <option name="12" value="userCardMonth">12</option>
+                    </select>
+                    <label for="expYear">Exp. Year:</label>
+                    <select>
+                            <option name="19" value="userCardYear">19</option>
+                            <option name="20" value="userCardYear">20</option>
+                            <option name="21" value="userCardYear">21</option>
+                            <option name="22" value="userCardYear">22</option>
+                            <option name="23" value="userCardYear">23</option>
+                            <option name="24" value="userCardYear">24</option>
+                            <option name="25" value="userCardYear">25</option>
+                            <option name="26" value="userCardYear">26</option>
+                    </select>
+                </fieldset><br>
+            </div>
 
             <!--SecurityQuestion-->
             <div>
@@ -66,8 +129,8 @@
                     <input id="secureAnswer" type="text" name="secureAnswer" placeholder="Enter an anwser" required><br>
 
                     <!--Buttons-->
-                    <input type="submit">
-                    <input type="reset">
+                    <input type="submit" id="submitButton">
+                    <input type="reset" id="resetButton">
                 </fieldset>
             </div>
 
@@ -86,6 +149,7 @@
         </nav>
         <p>&copy; 2019 Brent Ward - Travel Site Project</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
