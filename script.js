@@ -10,7 +10,7 @@ function myFunction() {
     topNav.classList.remove("sticky");
   }
 }
-
+/*
 //Submit Button Confirmation
 var submitButton = document.getElementById("submitButton");
 submitButton.addEventListener("click", function(event)
@@ -37,4 +37,31 @@ resetButton.addEventListener("click", function(event)
   }
 });
 
+*/
 
+var photoAlbum = document.getElementsByTagName('section')[0];
+var table = document.createElement('table');
+
+var img1 = document.createElement('img');
+img1.src = "Images/Travel1.jpg";
+var img2 = document.createElement('img');
+img2.src = "Images/Travel2.jpg";
+var img3 = document.createElement('img');
+img3.src = "Images/Travel3.jpg";
+var img4 = document.createElement('img');
+img4.src = "Images/Travel4.jpg";
+
+var images = [img1, img2, img3, img4];
+var descs = ['photo1', 'photo2', 'photo3', 'photo4'];
+
+var x = descs.length;
+//Adds image and matching desc to a tablerow, then adds the row to the table
+for(var i = 0; i < x; i++) {
+  var newRow = document.createElement('tr');
+  newRow.appendChild(images[i]);
+  var tdText = newRow.appendChild(document.createElement('td'));
+  tdText.innerHTML = descs[i];
+  table.appendChild(newRow);
+}
+console.log(table);
+photoAlbum.appendChild(table);
