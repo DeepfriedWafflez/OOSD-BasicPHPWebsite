@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <!--Viewport Meta Tag,for Mobile devices-->
-    <meta name="viewport" content="width=device-width", inital-scale="1.0">
+    <meta name="viewport" content="width=device-width" , inital-scale="1.0">
 
     <title>Brent Ward - Travel Experts Register</title>
     <!--Imports/Links-->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="registerBody">
     <!--Site Header: Logo, Title, Nav Bar-->
     <header>
         <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
@@ -30,30 +30,41 @@
     <main class="registerMain">
         <p id="regHeader">Register an Account:</p>
 
-        <form class ="registerForm" action="">
+        <form class="myForm" action="" name="myForm" id="registerForm">
             <!--Main account info-->
             <div>
                 <p>[Personal Infomation]</p>
-                <fieldset>  
-                    <label for="email">Email:</label> <input id="email" type="text" name="email" placeholder="Enter Email" required><br>
-                    <label for="password">Password:</label> <input id="password" type="password" name=password placeholder="Enter a Password" required><br>
-                    <label for="firstName">First Name:</label> <input id="firstName" type="text" name="firstName" placeholder="Enter First Name" required><br>
-                    <label for="lastName">Last Name:</label> <input id="lastName" type="text" name="lastName" placeholder="Enter Last Name" required>
+                <fieldset>
+                    <label for="email">Email:</label> <input id="email" type="email" name="email" placeholder="Enter Email"
+                        required>
+                    <p name="emailTT" id="emailTT">Please enter a valid email.</p><br>
+                    <label for="password">Password:</label> <input id="password" type="password" name=password
+                        placeholder="Enter a Password" required>
+                    <p name="passwordTT" id="passwordTT">Please enter a password here.</p><br>
+                    <label for="firstName">First Name:</label> <input id="firstName" type="text" name="firstName"
+                        placeholder="Enter First Name" required>
+                    <p name="firstNameTT" id="firstNameTT">Please enter your first name here.</p><br>
+                    <label for="lastName">Last Name:</label> <input id="lastName" type="text" name="lastName"
+                        placeholder="Enter Last Name" required>
+                    <p name="lastNameTT" id="lastNameTT">Please enter your last name here.</p><br>
                 </fieldset>
             </div>
             <fieldset class="genderFieldSet">
-                <!--Gender-->
+                <!--Gender--> Gender:
                 <input id="Male" type="radio" name="gender" value="Male">
                 <label for="male">Male</label>
                 <input id="female" type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
             </fieldset>
-            
+
             <div>
                 <!--Secondary account info-->
                 <fieldset>
-                    <label for="address">Address:</label><input id="address" type="text" name="address" placeholder="Enter Address"><br>
-                    <label for="city">City:</label><input id="city" type="text" name="city" placeholder="Enter City">
+                    <label for="address">Address:</label><input id="address" type="text" name="address" placeholder="Enter Address"
+                        required>
+                    <p name="addressTT" id="addressTT">Please enter your address here.</p><br>
+                    <label for="city">City:</label><input id="city" type="text" name="city" placeholder="Enter City"
+                        required>
                     <label for="province">Province:</label>
                     <select id="province" name="province">
                         <option name="NL" value="userProvince">NL</option>
@@ -70,7 +81,9 @@
                         <option name="NT" value="userProvince">NT</option>
                         <option name="NU" value="userProvince">NU</option>
                     </select><br>
-                    <label for="postalCode">Postal Code:</label><input id="postalCode" type="text" name="postalCode" placeholder="Enter Postal Code"><br>
+                    <label for="postalCode">Postal Code:</label><input id="postalCode" type="text" name="postalCode"
+                        placeholder="Enter Postal Code" required>
+                    <p name="postalCodeTT" id="postalCodeTT">Please enter a valid postal Code.</p><br>
                 </fieldset>
                 <!--Payment info-->
                 <p>[Payment Information]</p>
@@ -81,7 +94,9 @@
                         <option name="MC" value="userCardType">Mastercard</option>
                         <option name="Visa" value="userCardType">Visa</option>
                     </select><br>
-                    <label for="card#">Card Number:</label><input id="card#" type="text" name="card#" placeholder="Enter Credit Card Number"><br>
+                    <label for="card#">Card Number:</label><input id="card#" type="text" name="cardNumber" placeholder="Enter Credit Card Number"
+                        required>
+                    <p name="cardNumberTT" id="cardNumberTT">Please enter a valid x digit Card number.</p><br>
                     <label for="expMonth">Exp. Month:</label>
                     <select>
                         <option name="01" value="userCardMonth">01</option>
@@ -99,14 +114,14 @@
                     </select>
                     <label for="expYear">Exp. Year:</label>
                     <select>
-                            <option name="19" value="userCardYear">19</option>
-                            <option name="20" value="userCardYear">20</option>
-                            <option name="21" value="userCardYear">21</option>
-                            <option name="22" value="userCardYear">22</option>
-                            <option name="23" value="userCardYear">23</option>
-                            <option name="24" value="userCardYear">24</option>
-                            <option name="25" value="userCardYear">25</option>
-                            <option name="26" value="userCardYear">26</option>
+                        <option name="19" value="userCardYear">19</option>
+                        <option name="20" value="userCardYear">20</option>
+                        <option name="21" value="userCardYear">21</option>
+                        <option name="22" value="userCardYear">22</option>
+                        <option name="23" value="userCardYear">23</option>
+                        <option name="24" value="userCardYear">24</option>
+                        <option name="25" value="userCardYear">25</option>
+                        <option name="26" value="userCardYear">26</option>
                     </select>
                 </fieldset><br>
             </div>
@@ -131,6 +146,16 @@
                     <!--Buttons-->
                     <input type="submit" id="submitButton">
                     <input type="reset" id="resetButton">
+
+                    <!--Empty field errors-->
+                    <p id="errorEmail">Please enter an email address!</p>
+                    <p id="errorfirstName">Please enter your first name!</p>
+                    <p id="errorlastName">Please enter your last name!</p>
+                    <p id="errorPassword">Please enter a password</p>
+                    <p id="errorAddress">Please enter an address!</p>
+                    <p id="errorCity">Please enter a city!</p>
+                    <p id="errorPostalCode">Please enter your postal code!</p>
+                    <p id="errorCardNumber">Please enter your credit card number!</p>
                 </fieldset>
             </div>
 
