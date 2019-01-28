@@ -39,7 +39,7 @@ if (document.getElementById("indexBody")) {
 
 
   //Adds image and matching desc to a tablerow, then adds the row to the table
-  for (var i = 0; i < images.length; i++) {
+  for (let i = 0; i < images.length; i++) {
     var row = document.createElement('tr');
     var col1 = document.createElement('td');
     var col2 = document.createElement('td');
@@ -50,9 +50,8 @@ if (document.getElementById("indexBody")) {
 
     //adds link to the image
 
-    curLink = links[i];
     col1.addEventListener("click", function (event) {
-      var newWindow = window.open(curLink);
+      var newWindow = window.open(links[i]);
       function windowClose() {
         newWindow.close();
       }
@@ -77,26 +76,26 @@ if (document.getElementById("registerBody") || document.getElementById("contactB
 
 
   //Submit Button Confirmation
-  /*
   var submitButton = document.getElementById("submitButton");
   var myForm = document.myForm;
   submitButton.addEventListener("click", function (event) {
     var choice = confirm("Are you sure you want to submit the form?");
-    if (choice = true) {
+    if (choice != true) {
      document.myForm.submit();
     }
-  });*/
+  });
 
   //Reset Button Confirmation
   var resetButton = document.getElementById("resetButton");
   resetButton.addEventListener("click", function (event) {
+    event.preventDefault();
     var choice = confirm("Are you sure you want to reset the form?");
-    if (choice = true) {
+    if (choice != true) {
       document.myForm.reset();
     }
   });
 }
-
+ 
 //tool tip for register page
 if (document.getElementById("registerBody")) {
 
@@ -163,12 +162,12 @@ if (document.getElementById("registerBody")) {
 }
 
 //check for empty fields on register page
-if (document.getElementById("registerBBody")) {
+if (document.getElementById("registerBody")) {
   var myForm = document.myForm;
 
   //empty field variables
   var errorEmail = document.getElementById("errorEmail");
-  var errorFN = document.getElementById("errorfirstName");
+  var errorFN = document.getElementById("errorFirstName");
   var errorLN = document.getElementById("errorLastName");
   var errorPW = document.getElementById("errorPassword");
   var errorAdd = document.getElementById("errorAddress");
@@ -179,11 +178,8 @@ if (document.getElementById("registerBBody")) {
   var submitButton = document.getElementById("submitButton");
 
   submitButton.addEventListener("click", function (event) {
-    //asks if youre sure (part of previous assignment)
-    var choice = confirm("Are you sure you want to submit the form?");
-    if (choice = true) {
-      document.myForm.submit();
-    }
+    var regEx = /^[A-Z]\d[A-Z] ?\d[A-Z]\d$/;
+
     //hiding all displays
     errorEmail.style.display = "none";
     errorFN.style.display = "none";
@@ -203,48 +199,47 @@ if (document.getElementById("registerBBody")) {
     var city = document.myForm.city.value;
     var postalCode = document.myForm.postalCode.value;
     var cardNumber = document.myForm.cardNumber.value;
-    console.log("email");
+
     //Pops up with message
     if (!email) {
       event.preventDefault();
-      errorName.style.display = "block";
+      errorEmail.style.display = "block";
       console.log("missing email");
     }
     if (!firstName) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorFN.style.display = "block";
+      console.log("missing firstname");
     }
     if (!lastName) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorLN.style.display = "block";
+      console.log("missing lastname");
     }
     if (!password) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorPW.style.display = "block";
+      console.log("missing password");
     }
     if (!address) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorAdd.style.display = "block";
+      console.log("missing address");
     }
     if (!city) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorCity.style.display = "block";
+      console.log("missing city");
     }
-    if (!postalCode) {
+    if (!regEx.test(postalCode)) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorPC.style.display = "block";
+      console.log("missing postalcode");
     }
     if (!cardNumber) {
       event.preventDefault();
-      errorName.style.display = "block";
-      console.log("missing email");
+      errorCN.style.display = "block";
+      console.log("missing card number");
     }
-    
   })
 }
