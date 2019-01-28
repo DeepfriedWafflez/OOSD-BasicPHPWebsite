@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <!--Viewport Meta Tag,for Mobile devices-->
-    <meta name="viewport" content="width=device-width", inital-scale="1.0">
+    <meta name="viewport" content="width=device-width" , inital-scale="1.0">
 
     <title>Brent Ward - Travel Experts Feedback</title>
     <!--Imports/Links-->
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="feedbackBody">
     <!--Site Header: Logo, Title, Nav Bar-->
     <header>
         <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
@@ -33,9 +33,9 @@
         <div>
             <p>Here at Travel Experts we welcome everyones feedback in order to work to improve our company
                 to best serve you, and provide you with the best service out there.<br>Please fill out each box,
-            the extra comment section at the end is optional.</p>
+                the extra comment section at the end is optional.</p>
 
-            <form class="feedbackForm" action="POST">
+            <form class="myForm" action="" name="myForm" id="feedbackForm">
                 <p>How would you rate your experience with us?</p>
                 <input id="expBad" type="radio" name="exp" value="Bad" required>
                 <label for="expBad">Bad</label>
@@ -66,7 +66,8 @@
                 <input id="useYes" type="radio" name="use" value="yesReuse" required>
                 <label for="useYes">Yes</label>
 
-                <p>Do you have any other fina   l thoughts for us?</p>
+                <!--Custom user feedback input-->
+                <p>Do you have any other fina l thoughts for us?</p>
                 <textarea id="info" name="info" placeholder="Enter Additional info here"></textarea><br>
 
                 <!--Buttons-->
