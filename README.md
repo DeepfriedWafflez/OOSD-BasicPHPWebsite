@@ -1,5 +1,5 @@
-# Travel Experts Website
 #CPRG 210 Module FINAL ASSIGNMENT
+#Travel Experts Website
 
-## Made by: Brent Ward 
-##January 27, 2019
+##Made by: Brent Ward 
+##Date: January 27, 2019
