@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <!--Viewport Meta Tag,for Mobile devices-->
-    <meta name="viewport" content="width=device-width", inital-scale="1.0">
-    
+    <meta name="viewport" content="width=device-width" , inital-scale="1.0">
+
     <title>Brent Ward - Travel Experts Contacts</title>
     <!--Imports/Links-->
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="contactBody">
     <!--Site Header: Logo, Title, Nav Bar-->
     <header>
         <a href="index.html"><img id="logo" src="Images/TravelSiteLogo.png" alt="Logo"></a>
@@ -41,12 +41,13 @@
             <li>Customer Support: 1-800-688-8261</li>
             <li>Quality Assurance: 1-800-688-3247</li>
         </ul>
+        <!--Small support contact form-->
         <h2>Contact Us</h2>
-        <form class="contactForm" action="POST">
+        <form class="myForm" action="" name="myForm" id="contactForm">
             <label for="userName">Name:</label>
             <input id="userName" type="text" name="userName" placeholder="Enter First and Last Name"><br>
             <label for="email">Email:</label>
-            <input id="email" type="text" name="email" placeholder="Enter Email"><br><br>
+            <input id="email" type="email" name="email" placeholder="Enter Email"><br><br>
             <textarea id="response" name="response" height=350 placeholder="What can we help you with?"></textarea><br>
 
             <input type="submit" id="submitButton">
